@@ -1,0 +1,28 @@
+#header {
+padding: 0px;
+margin: 0px;
+/*background:#ddd;*/
+}
+#sidebar {
+float: left;
+width: 20%;
+margin: 0px;
+padding-bottom: 20px;
+/*background:#9c9;*/
+}
+#main {
+float: left;
+width: 65%;
+margin: 0px;
+padding: 0px;
+/*background:#99c;*/
+}
+#footer {
+clear: both;
+margin: 0px;
+margin-bottom: 30px;
+/*background:#cc9;*/
+}
+#footer p {
+margin: 0px;
+}

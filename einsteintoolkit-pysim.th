@@ -1,0 +1,259 @@
+# Component list for the Einstein Toolkit <http://www.einsteintoolkit.org/>
+# $Revision$
+# $Date$
+# $HeadURL$
+
+!CRL_VERSION = 1.0
+
+!DEFINE ROOT = Cactus
+!DEFINE ARR  = $ROOT/arrangements
+
+!DEFINE ET_RELEASE = ET_2010_06
+
+
+
+# This thorn list
+!TARGET   = $ROOT
+!TYPE     = svn
+!URL      = https://svn.einsteintoolkit.org/$1/branches/$ET_RELEASE
+!CHECKOUT = manifest
+
+# Cactus Flesh
+!TARGET   = $ROOT
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/flesh/branches/$ET_RELEASE
+!URL      = http://svn.cactuscode.org/flesh/branches/$ET_RELEASE
+!CHECKOUT = Cactus
+!NAME     = .
+
+# Pysim Simulation Factory
+!TARGET   = $ROOT
+!TYPE     = svn
+!URL      = https://svn.cct.lsu.edu/repos/numrel/$1/branches/PYSIM_2010
+!CHECKOUT = simfactory
+
+# Example parameter files
+!TARGET   = $ROOT
+!TYPE     = svn
+!URL      = https://svn.einsteintoolkit.org/cactus/EinsteinExamples/branches/$ET_RELEASE/$1
+!CHECKOUT = par
+
+# Cactus utilities, including the GetComponents script
+!TARGET   = $ROOT
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/Utilities/branches/$ET_RELEASE
+!URL      = http://svn.cactuscode.org/Utilities/branches/$ET_RELEASE
+!CHECKOUT = .
+!NAME     = utils
+
+
+
+# Cactus thorns
+!TARGET   = $ARR
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/arrangements/$1/$2/branches/$ET_RELEASE
+!URL      = http://svn.cactuscode.org/arrangements/$1/$2/branches/$ET_RELEASE
+!CHECKOUT =
+CactusArchive/ADM
+CactusBase/Boundary
+CactusBase/CartGrid3D
+CactusBase/CoordBase
+CactusBase/Fortran
+CactusBase/IOASCII
+CactusBase/IOBasic
+CactusBase/IOUtil
+CactusBase/InitBase
+CactusBase/LocalInterp
+CactusBase/LocalReduce
+CactusBase/SymBase
+CactusBase/Time
+
+CactusConnect/HTTPD
+CactusConnect/HTTPDExtra
+CactusConnect/Socket
+
+CactusElliptic/EllBase
+#CactusElliptic/EllPETSc
+CactusElliptic/EllSOR
+
+CactusExternal/jpeg6b
+
+CactusIO/IOJpeg
+
+CactusNumerical/MoL
+CactusNumerical/Cartoon2D
+CactusNumerical/Dissipation
+CactusNumerical/Noise
+CactusNumerical/Norms
+CactusNumerical/Periodic
+CactusNumerical/ReflectionSymmetry
+CactusNumerical/RotatingSymmetry180
+CactusNumerical/RotatingSymmetry90
+CactusNumerical/Slab
+CactusNumerical/SlabTest
+CactusNumerical/SpaceMask
+CactusNumerical/SphericalSurface
+
+CactusPUGH/PUGH
+CactusPUGH/PUGHInterp
+CactusPUGH/PUGHReduce
+CactusPUGH/PUGHSlab
+CactusPUGHIO/IOHDF5Util
+CactusPUGHIO/IOHDF5
+
+CactusUtils/Formaline
+CactusUtils/NaNChecker
+CactusUtils/Nice
+CactusUtils/TerminationTrigger
+CactusUtils/TimerReport
+
+
+
+# The Einstein Toolkit
+!TARGET   = $ARR
+!TYPE     = svn
+!URL      = https://svn.einsteintoolkit.org/cactus/$1/$2/branches/$ET_RELEASE
+!CHECKOUT = 
+EinsteinAnalysis/ADMAnalysis
+EinsteinAnalysis/ADMConstraints
+EinsteinAnalysis/AHFinder
+EinsteinAnalysis/AHFinderDirect
+EinsteinAnalysis/CalcK
+EinsteinAnalysis/EHFinder
+EinsteinAnalysis/Extract
+EinsteinAnalysis/Hydro_Analysis
+EinsteinAnalysis/Multipole
+EinsteinAnalysis/WeylScal4
+EinsteinBase/ADMBase
+EinsteinBase/ADMCoupling
+EinsteinBase/ADMMacros
+EinsteinBase/Constants
+EinsteinBase/CoordGauge
+EinsteinBase/EOS_Base
+EinsteinBase/EOSG_Base
+EinsteinBase/HydroBase
+EinsteinBase/StaticConformal
+EinsteinBase/TmunuBase
+EinsteinEOS/EOSG_Hybrid
+EinsteinEOS/EOSG_IdealFluid
+EinsteinEOS/EOSG_Polytrope
+EinsteinEOS/EOS_Hybrid
+EinsteinEOS/EOS_IdealFluid
+EinsteinEOS/EOS_Polytrope
+EinsteinEvolve/GRHydro
+EinsteinEvolve/LegoExcision
+EinsteinEvolve/NewRad
+EinsteinInitialData/DistortedBHIVP
+EinsteinInitialData/Exact
+EinsteinInitialData/GRHydro_InitData
+EinsteinInitialData/Hydro_InitExcision
+EinsteinInitialData/IDAnalyticBH
+EinsteinInitialData/IDAxiBrillBH
+EinsteinInitialData/IDAxiOddBrillBH
+EinsteinInitialData/IDBrillData
+EinsteinInitialData/IDConstraintViolate
+EinsteinInitialData/IDFileADM
+EinsteinInitialData/IDLinearWaves
+EinsteinInitialData/Meudon_Bin_BH
+EinsteinInitialData/Meudon_Bin_NS
+EinsteinInitialData/Meudon_Mag_NS
+EinsteinInitialData/NoExcision
+EinsteinInitialData/RotatingDBHIVP
+EinsteinInitialData/TOVSolver
+EinsteinInitialData/TwoPunctures
+EinsteinUtils/SetMask_SphericalSurface
+EinsteinUtils/TGRtensor
+
+
+# Additional Cactus thorns
+!TARGET   = $ARR
+!TYPE     = svn
+!AUTH_URL = https://svn.cactuscode.org/projects/$1/$2/branches/$ET_RELEASE
+!URL      = http://svn.cactuscode.org/projects/$1/$2/branches/$ET_RELEASE
+!CHECKOUT =
+ExternalLibraries/BLAS
+ExternalLibraries/GSL
+ExternalLibraries/HDF5
+ExternalLibraries/LAPACK
+ExternalLibraries/LORENE
+
+TAT/TATelliptic
+
+
+
+# Various thorns from the AEI
+!TARGET   = $ARR
+!TYPE     = svn
+!URL      = http://svn.aei.mpg.de/numrel/$1/$2/branches/$ET_RELEASE
+!AUTH_URL = https://svn.aei.mpg.de/numrel/$1/$2/branches/$ET_RELEASE
+!CHECKOUT = 
+AEIThorns/AEILocalInterp
+
+
+# Various thorns from LSU
+!TARGET   = $ARR
+!TYPE     = svn
+!URL      = https://svn.cct.lsu.edu/repos/numrel/$1/$2/branches/$ET_RELEASE
+!CHECKOUT = 
+LSUThorns/QuasiLocalMeasures
+LSUThorns/SummationByParts
+
+
+
+# From Kranc (required e.g. by McLachlan)
+!TARGET   = $ARR
+!TYPE     = git
+!URL      = git://github.com/ianhinder/Kranc.git
+!AUTH_URL = git@github.com:ianhinder/Kranc.git
+!REPO_PATH= Auxiliary/Cactus
+!REPO_BRANCH = ET_2010_06
+!CHECKOUT = 
+KrancNumericalTools/GenericFD
+
+
+
+# McLachlan, the spacetime code
+!TARGET   = $ARR
+!TYPE     = git
+!URL      = git://carpetcode.dyndns.org/McLachlan
+!AUTH_URL = carpetgit@carpetcode.dyndns.org:McLachlan
+!REPO_PATH= $2
+!REPO_BRANCH = ET_2010_06
+!CHECKOUT = McLachlan/doc McLachlan/m McLachlan/par
+McLachlan/ML_BSSN
+McLachlan/ML_BSSN_Helper
+McLachlan/ML_BSSN_O2
+McLachlan/ML_BSSN_O2_Helper
+McLachlan/ML_BSSN_Test
+McLachlan/ML_ADMConstraints
+McLachlan/ML_ADMQuantities
+
+
+
+# Carpet, the AMR driver
+!TARGET   = $ARR
+!TYPE     = git
+!URL      = git://carpetcode.dyndns.org/carpet
+!AUTH_URL = carpetgit@carpetcode.dyndns.org:carpet
+!REPO_BRANCH = ET_2010_06
+# For experimental version, comment previous three lines and uncomment next two
+# Note that you will need to get access first (ask Erik Schnetter)
+#!TYPE     = hg
+#!URL      = ssh://carpetmercurial@carpetcode.dyndns.org/carpet
+!CHECKOUT = Carpet/doc
+Carpet/Carpet
+Carpet/CarpetEvolutionMask
+Carpet/CarpetIOASCII
+Carpet/CarpetIOBasic
+Carpet/CarpetIOHDF5
+Carpet/CarpetIOScalar
+Carpet/CarpetInterp
+Carpet/CarpetInterp2
+Carpet/CarpetLib
+Carpet/CarpetMask
+Carpet/CarpetReduce
+Carpet/CarpetRegrid
+Carpet/CarpetRegrid2
+Carpet/CarpetSlab
+Carpet/CarpetTracker
+Carpet/LoopControl
