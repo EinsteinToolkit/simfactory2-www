@@ -1,0 +1,11 @@
+.. _command_create-submit:
+
+create-submit
+================================================
+
+*create and submit a simulation*
+
+
+This command combines the action of create and submit to perform the two
+operations together.
+

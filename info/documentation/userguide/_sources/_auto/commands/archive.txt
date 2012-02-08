@@ -1,0 +1,7 @@
+.. _command_archive:
+
+archive
+================================================
+
+*archive a simulation or an individual restart*
+

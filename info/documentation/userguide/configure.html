@@ -1,0 +1,150 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuring SimFactory &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="index.html" />
+    <link rel="next" title="Using SimFactory" href="use.html" />
+    <link rel="prev" title="Downloading SimFactory" href="download.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="use.html" title="Using SimFactory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="Downloading SimFactory"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuring SimFactory</a><ul>
+<li><a class="reference internal" href="#shell-alias">Shell Alias</a></li>
+<li><a class="reference internal" href="#setup">Setup</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="download.html"
+                        title="previous chapter">Downloading SimFactory</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="use.html"
+                        title="next chapter">Using SimFactory</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/configure.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="configuring-simfactory">
+<h1>Configuring SimFactory<a class="headerlink" href="#configuring-simfactory" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="shell-alias">
+<h2>Shell Alias<a class="headerlink" href="#shell-alias" title="Permalink to this headline">¶</a></h2>
+<p>The main SimFactory binary is called &#8220;sim&#8221; and is located in
+simfactory/bin.  You can execute SimFactory explicitly as
+simfactory/bin/sim, but we recommend that you set up a shell alias in
+your shell startup file so that you can just use the command &#8220;sim&#8221;.
+For bash users this file is .bashrc on Linux and .profile on Mac OS.
+Add the following to the shell startup file:</p>
+<blockquote>
+<div>alias sim=simfactory/bin/sim</div></blockquote>
+</div>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>SimFactory needs to be configured before it can be used.  The
+recommended way to do this is to use the <em>setup</em> command which prompts
+the user for the required information.</p>
+<blockquote>
+<div>sim setup</div></blockquote>
+<p>Follow the on-screen prompts.  This will output your choices in the
+configuration file simfactory/etc/defs.local.ini.  It is likely that
+you will have to further customise this file.  You can see some
+possible option settings in simfactory/etc/defs.local.ini.example.</p>
+<p>SimFactory needs to have a <em>machine definition</em> for every machine that
+it is run on.  If you are using a machine that SimFactory already has
+a definition for, such as a well-known supercomputer used by others in
+the Cactus community, then no additional setup is required.  If,
+however, you are running SimFactory on an individual laptop or
+workstation, or on an unsupported supercomputer, the setup command
+will also create a new machine definition for the local machine in
+simfactory/mdb/machines.  You may also have to add extra information
+to this file.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="use.html" title="Using SimFactory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="download.html" title="Downloading SimFactory"
+             >previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

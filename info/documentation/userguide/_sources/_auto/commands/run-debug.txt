@@ -1,0 +1,7 @@
+.. _command_run-debug:
+
+run-debug
+================================================
+
+*launch simulation using an interactive debugger*
+

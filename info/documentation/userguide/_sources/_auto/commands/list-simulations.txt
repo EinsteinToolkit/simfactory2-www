@@ -1,0 +1,7 @@
+.. _command_list-simulations:
+
+list-simulations
+================================================
+
+*list simfactory cactus simulations*
+

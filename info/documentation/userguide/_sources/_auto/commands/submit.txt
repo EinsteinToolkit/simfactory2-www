@@ -1,0 +1,54 @@
+.. _command_submit:
+
+submit
+================================================
+
+*submit a simulation*
+
+
+
+Usage
+-----
+
+sim submit [options] *simname* [options]
+
+  Create a new restart in the simulation and submit it to the queuing
+  system of the machine.
+
+
+Options
+-------
+.. program:: sim submit
+
+.. cmdoption:: --recover
+
+  Recover and resume simulation using checkpointing.
+
+.. cmdoption:: --debugger <totalview/ddt>
+
+  use this debugger for interactive debugging
+
+.. cmdoption:: --restart-id <id>
+
+  assign this restart id to the submitted/ran simulation
+
+.. cmdoption:: --job-id <id>
+
+  use this job id when referencing a simulation
+
+.. cmdoption:: --from-restart-id <id>
+
+  use this restart id when recovering. --recover must also be provided
+
+.. cmdoption:: --hide
+
+  Hide simulation name in pbs*
+
+.. cmdoption:: --hide-boring
+
+  Hide boring words in pbs* simulation name
+
+.. cmdoption:: --hide-dangerous
+
+  Hide dangerous words in pbs* simulation name
+

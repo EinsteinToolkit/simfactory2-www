@@ -1,0 +1,67 @@
+.. _command_build:
+
+build
+================================================
+
+*build cactus either locally or remotely*
+
+
+
+Usage
+-----
+
+sim build [options] [ *config* ] [options]
+
+  Build a Cactus configuration called *config*.  If *config* is
+  omitted, the default configuration name specified in defs.local.ini
+  is used.  
+
+
+Options
+-------
+.. program:: sim build
+
+.. cmdoption:: --profile
+
+  Build Cactus with profiling
+
+.. cmdoption:: --optimise
+
+  Build Cactus with optimization, disabled if debugging is enabled
+
+.. cmdoption:: --no-submitscript
+
+  Build configuration without a submit script, and remove one if it exists.
+
+.. cmdoption:: --unsafe
+
+  Build Cactus with unsafe options
+
+.. cmdoption:: --virtual
+
+  Build a virtual Cactus installation using a predefined executable
+
+.. cmdoption:: --reconfig
+
+  Reconfig Cactus before building
+
+.. cmdoption:: --virtual-executable <file>
+
+  Existing executable for building a virtual Cactus executable
+
+.. cmdoption:: --clean
+
+  Clean Cactus before building
+
+.. cmdoption:: --debug
+
+  Build Cactus with debugging code designed to catch errors (a new configuration will be built named with a -debug suffix)
+
+.. cmdoption:: --thornlist <file>
+
+  ThornList file for building Cactus
+
+.. cmdoption:: --optionlist <file>
+
+  OptionList file for building Cactus
+

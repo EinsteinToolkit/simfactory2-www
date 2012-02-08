@@ -1,0 +1,7 @@
+.. _command_print-mdb-entry:
+
+print-mdb-entry
+================================================
+
+*list information about a single machine*
+

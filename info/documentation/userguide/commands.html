@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Commands &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="next" title="archive" href="_auto/commands/archive.html" />
+    <link rel="prev" title="Reference" href="reference.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="_auto/commands/archive.html" title="archive"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Commands</a><ul>
+<li><a class="reference internal" href="#list-of-commands">List of Commands</a></li>
+<li><a class="reference internal" href="#common-options">Common Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="reference.html"
+                        title="previous chapter">Reference</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="_auto/commands/archive.html"
+                        title="next chapter">archive</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/commands.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="commands">
+<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>SimFactory&#8217;s functionality is divided into a number of separate
+commands.  Each command can take both mandatory arguments as well as
+options.</p>
+<div class="section" id="list-of-commands">
+<h2>List of Commands<a class="headerlink" href="#list-of-commands" title="Permalink to this headline">¶</a></h2>
+<p>The essential SimFactory commands are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="_auto/commands/build.html"><em>build</em></a></td>
+<td>build cactus either locally or remotely</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/create.html"><em>create</em></a></td>
+<td>create a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/create-submit.html"><em>create-submit</em></a></td>
+<td>create and submit a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/purge.html"><em>purge</em></a></td>
+<td>purge a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/setup.html"><em>setup</em></a></td>
+<td>interactively configure simfactory</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/stop.html"><em>stop</em></a></td>
+<td>stop an active simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/submit.html"><em>submit</em></a></td>
+<td>submit a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/sync.html"><em>sync</em></a></td>
+<td>sync cactus sourcetree to a remote machine</td>
+</tr>
+</tbody>
+</table>
+<p>The following commands are also available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="46%" />
+<col width="54%" />
+</colgroup>
+<tbody valign="top">
+<tr><td><a class="reference internal" href="_auto/commands/archive.html"><em>archive</em></a></td>
+<td>archive a simulation or an individual restart</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/checkout.html"><em>checkout</em></a></td>
+<td>checkout thorns using GetComponents</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/cleanup.html"><em>cleanup</em></a></td>
+<td>clean up a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/create-run.html"><em>create-run</em></a></td>
+<td>create and run a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/execute.html"><em>execute</em></a></td>
+<td>execute a command</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/get-archived-simulation.html"><em>get-archived-simulation</em></a></td>
+<td>retrieve an archived simulation by simulationid</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/get-output-dir.html"><em>get-output-dir</em></a></td>
+<td>get the output directory for a given simulation/restart</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/interactive.html"><em>interactive</em></a></td>
+<td>initiate an interactive session on a compute node</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/list-archived-simulations.html"><em>list-archived-simulations</em></a></td>
+<td>list archived simulations</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/list-configurations.html"><em>list-configurations</em></a></td>
+<td>list simfactory cactus configurations</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/list-machines.html"><em>list-machines</em></a></td>
+<td>list all the machines in the machine database</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/list-simulations.html"><em>list-simulations</em></a></td>
+<td>list simfactory cactus simulations</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/login.html"><em>login</em></a></td>
+<td>launch an interactive shell on a remote machine</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/print-mdb.html"><em>print-mdb</em></a></td>
+<td>print parsable mdb</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/print-mdb-entry.html"><em>print-mdb-entry</em></a></td>
+<td>list information about a single machine</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/remove-submitscript.html"><em>remove-submitscript</em></a></td>
+<td>remove a submit script from a configuration</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/run.html"><em>run</em></a></td>
+<td>launch a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/run-debug.html"><em>run-debug</em></a></td>
+<td>launch simulation using an interactive debugger</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/setup-silent.html"><em>setup-silent</em></a></td>
+<td>silently create a set of reasonable defaults</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/show-output.html"><em>show-output</em></a></td>
+<td>show the output of a simulation</td>
+</tr>
+<tr><td><a class="reference internal" href="_auto/commands/whoami.html"><em>whoami</em></a></td>
+<td>what is the name of the machine simfactory is running on</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Not all commands are documented</p>
+</div>
+</div>
+<div class="section" id="common-options">
+<h2>Common Options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h2>
+<p>All SimFactory commands take the following options.  These are the important ones:</p>
+<dl class="cmdoption">
+<dt id="cmdoption--remote">
+<tt class="descname">--remote</tt><tt class="descclassname"> &lt;machine&gt;</tt><a class="headerlink" href="#cmdoption--remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute command on a remote machine instead of the local machine</p>
+</dd></dl>
+
+<p>and these are the remaining ones:</p>
+<dl class="cmdoption">
+<dt id="cmdoption--allocation">
+<tt class="descname">--allocation</tt><tt class="descclassname"> &lt;identifier&gt;</tt><a class="headerlink" href="#cmdoption--allocation" title="Permalink to this definition">¶</a></dt>
+<dd><p>CPU allocation to use</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--argument">
+<tt class="descname">--argument</tt><tt class="descclassname"> &lt;args&gt;</tt><a class="headerlink" href="#cmdoption--argument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Additional Arguments</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--basedir">
+<tt class="descname">--basedir</tt><tt class="descclassname"> &lt;directory&gt;</tt><a class="headerlink" href="#cmdoption--basedir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base directory for simulations</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--cdb">
+<tt class="descname">--cdb</tt><tt class="descclassname"> &lt;path&gt;</tt><a class="headerlink" href="#cmdoption--cdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>INI file to use as the config database</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--console">
+<tt class="descname">--console</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption--console" title="Permalink to this definition">¶</a></dt>
+<dd><p>Output to console as opposed to writing to a log file</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--force">
+<tt class="descname">--force</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption--force" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force cleanup even though a simulation may still be running.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--hostname">
+<tt class="descname">--hostname</tt><tt class="descclassname"> &lt;hostname&gt;</tt><a class="headerlink" href="#cmdoption--hostname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Machine hostname</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--localdir">
+<tt class="descname">--localdir</tt><tt class="descclassname"> &lt;directory&gt;</tt><a class="headerlink" href="#cmdoption--localdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch to directory</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--machine">
+<tt class="descname">--machine</tt><tt class="descclassname"> &lt;machinename&gt;</tt><a class="headerlink" href="#cmdoption--machine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force the usage of a certain machine entry</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--mdb">
+<tt class="descname">--mdb</tt><tt class="descclassname"> &lt;path&gt;</tt><a class="headerlink" href="#cmdoption--mdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>INI file to use as the machine database</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--num-threads">
+<tt class="descname">--num-threads</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption--num-threads" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of threads to use</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--ppn">
+<tt class="descname">--ppn</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption--ppn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processors per node</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--ppn-used">
+<tt class="descname">--ppn-used</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption--ppn-used" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processors per node to use</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--procs">
+<tt class="descname">--procs</tt><tt class="descclassname"> &lt;int&gt;</tt><a class="headerlink" href="#cmdoption--procs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processors to use</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--queue">
+<tt class="descname">--queue</tt><tt class="descclassname"> &lt;identifier&gt;</tt><a class="headerlink" href="#cmdoption--queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queue to use for job submission</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--remotecactuspath">
+<tt class="descname">--remotecactuspath</tt><tt class="descclassname"> &lt;directory&gt;</tt><a class="headerlink" href="#cmdoption--remotecactuspath" title="Permalink to this definition">¶</a></dt>
+<dd><p>the Cactus path to use on the remote system</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--remotemachine">
+<tt class="descname">--remotemachine</tt><tt class="descclassname"> &lt;machine&gt;</tt><a class="headerlink" href="#cmdoption--remotemachine" title="Permalink to this definition">¶</a></dt>
+<dd><p>see &#8211;remote</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--runscript">
+<tt class="descname">--runscript</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption--runscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>run script for job execution</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--scratchdir">
+<tt class="descname">--scratchdir</tt><tt class="descclassname"> &lt;path&gt;</tt><a class="headerlink" href="#cmdoption--scratchdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scratch directory</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--sourcebasedir">
+<tt class="descname">--sourcebasedir</tt><tt class="descclassname"> &lt;directory&gt;</tt><a class="headerlink" href="#cmdoption--sourcebasedir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base directory for source tree</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--submitscript">
+<tt class="descname">--submitscript</tt><tt class="descclassname"> &lt;file&gt;</tt><a class="headerlink" href="#cmdoption--submitscript" title="Permalink to this definition">¶</a></dt>
+<dd><p>Submit script for job submission</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--verbose">
+<tt class="descname">--verbose</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption--verbose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Be verbose with output</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption--walltime">
+<tt class="descname">--walltime</tt><tt class="descclassname"> &lt;HH:MM:SS&gt;</tt><a class="headerlink" href="#cmdoption--walltime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum run time for your simulation</p>
+</dd></dl>
+
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">These don&#8217;t all apply to all commands.  Why are they in the common.ini file?</p>
+</div>
+<div class="admonition-todo admonition" id="index-2">
+<p class="first admonition-title">Todo</p>
+<p class="last">Include arguments and default values</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="_auto/commands/archive.html" title="archive"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="Reference"
+             >previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

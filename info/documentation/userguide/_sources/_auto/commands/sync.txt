@@ -1,0 +1,36 @@
+.. _command_sync:
+
+sync
+================================================
+
+*sync cactus sourcetree to a remote machine*
+
+
+
+Usage
+-----
+
+sim sync [options] [ *machine* ]
+
+  Synchronise local Cactus source tree to *machine*.  The first time
+  this operation is performed, it can take some time as all the source
+  is copied.  Subsequent calls will only synchronise the files which
+  have changed.
+
+
+Options
+-------
+.. program:: sim sync
+
+.. cmdoption:: --sync-path <path>
+
+  Only synchronise a specific path
+
+.. cmdoption:: --sync-parfiles
+
+  Only synchronise parameter files
+
+.. cmdoption:: --sync-sourcetree
+
+  Only synchronise the source tree
+

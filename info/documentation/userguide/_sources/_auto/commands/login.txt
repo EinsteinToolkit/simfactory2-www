@@ -1,0 +1,23 @@
+.. _command_login:
+
+login
+================================================
+
+*launch an interactive shell on a remote machine*
+
+
+
+Usage
+-----
+
+sim login *machine*
+
+  This command uses the SimFactory machine database to start an
+  interactive terminal login session on the remote machine, typically
+  using ssh.  This is helpful when the machine cannot be accessed
+  directly, or requires a special login process.
+
+Options
+-------
+.. program:: sim login
+

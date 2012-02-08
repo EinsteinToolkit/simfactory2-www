@@ -1,0 +1,7 @@
+.. _command_cleanup:
+
+cleanup
+================================================
+
+*clean up a simulation*
+

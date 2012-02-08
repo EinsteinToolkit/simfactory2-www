@@ -1,0 +1,7 @@
+.. _command_list-machines:
+
+list-machines
+================================================
+
+*list all the machines in the machine database*
+

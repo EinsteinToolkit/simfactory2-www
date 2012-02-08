@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Terminology for nodes, cores, processes, and threads &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="index.html" />
+    <link rel="up" title="Reference" href="reference.html" />
+    <link rel="prev" title="defs.local.ini" href="defs.local.ini.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="defs.local.ini.html" title="defs.local.ini"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" accesskey="U">Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Terminology for nodes, cores, processes, and threads</a><ul>
+<li><a class="reference internal" href="#definitions">Definitions</a></li>
+<li><a class="reference internal" href="#variables-and-command-line-options">Variables and command-line options</a></li>
+<li><a class="reference internal" href="#other-important-quantitites">Other important quantitites</a></li>
+<li><a class="reference internal" href="#choice-process">Choice process</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="defs.local.ini.html"
+                        title="previous chapter">defs.local.ini</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/processterminology.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="terminology-for-nodes-cores-processes-and-threads">
+<h1>Terminology for nodes, cores, processes, and threads<a class="headerlink" href="#terminology-for-nodes-cores-processes-and-threads" title="Permalink to this headline">¶</a></h1>
+<p>SimFactory uses some terminology for nodes, cores, processes, and
+threads. These terms are used somewhat inconsistently in the wild, and
+marketing changes their definitions every few years. Below we define
+the terms unambiguously. It is unfortunate that SimFactory&#8217;s variable
+names and command line options are somewhat outdated and don&#8217;t
+correspond to modern terminology any more.</p>
+<div class="section" id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>A <em>machine</em> consists of a certain number of <em>nodes</em>, each of which
+consists of a certain number of <em>cores</em>.</li>
+<li>A job requests (from the queuing system) a certain number of nodes,
+and requests a certain number of cores on each node.</li>
+<li>The MDB entries [maxnodes], [minppn], and [maxppn] define how many
+nodes a job can request at most, and define the range of allowed
+values for cores-per-node.</li>
+<li>SimFactory starts a number of MPI <em>processes</em>, choosing how many MPI
+processes should be placed on every node. Each MPI process starts a
+certain number of OpenMP <em>threads</em>. The distribution of threads to
+cores is performed automatically by the operating system and usually
+cannot be influenced.</li>
+</ul>
+<p>Note that nodes and cores are requested from the queuing system, while
+processes and threads are started by SimFactory. These numbers may
+differ, allowing under- and over-subscription.</p>
+</div>
+<div class="section" id="variables-and-command-line-options">
+<h2>Variables and command-line options<a class="headerlink" href="#variables-and-command-line-options" title="Permalink to this headline">¶</a></h2>
+<p>SimFactory expands variables in files and uses certain command line
+options. These variables and options have the following definitions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="28%" />
+<col width="40%" />
+</colgroup>
+<thead valign="bottom">
+<tr><th class="head">Variable</th>
+<th class="head">Option</th>
+<th class="head">Definition</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td>NODES</td>
+<td>&nbsp;</td>
+<td>nodes</td>
+</tr>
+<tr><td>PROCS</td>
+<td>&#8211;procs</td>
+<td>threads</td>
+</tr>
+<tr><td>PROCS_REQUESTED</td>
+<td>&nbsp;</td>
+<td>cores</td>
+</tr>
+<tr><td>PPN</td>
+<td>&#8211;ppn</td>
+<td>cores per node</td>
+</tr>
+<tr><td>PPN_USED</td>
+<td>&#8211;ppn-used</td>
+<td>threads per node</td>
+</tr>
+<tr><td>NUM_PROCS</td>
+<td>&nbsp;</td>
+<td>processes</td>
+</tr>
+<tr><td>NUM_THREADS</td>
+<td>&#8211;num-threads</td>
+<td>threads per process</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="other-important-quantitites">
+<h2>Other important quantitites<a class="headerlink" href="#other-important-quantitites" title="Permalink to this headline">¶</a></h2>
+<p>processes per node</p>
+<blockquote>
+<div><p>= (NUM_PROCS + NODES - 1) / NODES</p>
+<p>= PPN_USED / NUM_THREADS</p>
+<p>= NODE_PROCS</p>
+</div></blockquote>
+<p>Note that nodes and processes, or cores and threads may not be integer
+multiples of each other. Results of divisions must be correctly
+rounded.</p>
+</div>
+<div class="section" id="choice-process">
+<h2>Choice process<a class="headerlink" href="#choice-process" title="Permalink to this headline">¶</a></h2>
+<p>The user chooses the total number of threads (&#8211;procs) and the number
+of threads per process (&#8211;num-threads). We then assume that we run
+one thread per core, that we use all cores per node, and that we use
+as few nodes as possible. This defines defaults for all other
+quantities. The user can under- or over-subscribe cores by defining
+how many threads per node (&#8211;ppn-used) to run. The number of nodes is
+always chosen automatically.</p>
+<p>The number of cores per node that can be requested from the queuing
+system define a granularity. The number of threads that the user wants
+to run may not fit. In this case, the last node may be used only
+partially. Similarly, the number of threads per node may be arbitrary,
+and may not be equal to (or an integer multiple of) the number of
+cores per node.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="defs.local.ini.html" title="defs.local.ini"
+             >previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

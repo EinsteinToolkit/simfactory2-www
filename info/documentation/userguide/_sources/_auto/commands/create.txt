@@ -1,0 +1,46 @@
+.. _command_create:
+
+create
+================================================
+
+*create a simulation*
+
+
+
+Usage
+-----
+
+sim create [options] *simname* [ *parfile* | :option:`--parfile` *parfile* ]
+
+  Create a simulation named *simname* using a specific parameter file.
+
+sim create [options] *simname* --testsuite [--select-tests *testspec* ]
+
+  Create a simulation named *simname* which runs the Cactus test
+  suite.  See the documentation for selecting tests.
+
+
+Options
+-------
+.. program:: sim create
+
+.. cmdoption:: --parfile <file>
+
+  parameter file for executing Cactus simulation
+
+.. cmdoption:: --configuration <file>
+
+  configuration to use for Cactus simulation
+
+.. cmdoption:: --config <file>
+
+  see --configuration
+
+.. cmdoption:: --testsuite
+
+  Run Cactus testsuite
+
+.. cmdoption:: --select-tests all|<test>.par|<arrangement>|<arrangement>/<thorn>
+
+  Select which tests to run
+

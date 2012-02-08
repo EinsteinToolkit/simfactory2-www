@@ -1,0 +1,7 @@
+.. _command_get-archived-simulation:
+
+get-archived-simulation
+================================================
+
+*retrieve an archived simulation by simulationid*
+

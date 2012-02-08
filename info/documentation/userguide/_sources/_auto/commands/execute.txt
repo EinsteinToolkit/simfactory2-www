@@ -1,0 +1,7 @@
+.. _command_execute:
+
+execute
+================================================
+
+*execute a command*
+

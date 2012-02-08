@@ -1,0 +1,41 @@
+.. _command_run:
+
+run
+================================================
+
+*launch a simulation*
+
+
+
+Usage
+-----
+
+sim run [options] *simname*
+
+  This command runs an existing simulation interactively; i.e. without
+  submitting it to a queuing system.  This can be useful with
+  interactive jobs on HPC systems and on workstations and laptops.
+  Running codes directly on the head node of an HPC system is usually
+  forbidden, and will not usually work.
+
+
+Options
+-------
+.. program:: sim run
+
+.. cmdoption:: --recover
+
+  Recover and resume simulation using checkpointing.
+
+.. cmdoption:: --debugger <totalview/ddt>
+
+  use this debugger for interactive debugging
+
+.. cmdoption:: --restart-id <id>
+
+  assign this restart id to the submitted/ran simulation
+
+.. cmdoption:: --from-restart-id <id>
+
+  use this restart id when recovering. --recover must also be provided
+

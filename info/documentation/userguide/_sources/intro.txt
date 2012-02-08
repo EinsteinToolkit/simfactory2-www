@@ -1,0 +1,11 @@
+
+Introduction
+============
+
+.. todo:: Give an overview of SimFactory here
+
+SimFactory is ...
+
+It is assumed that you already have a Cactus source directory which
+you want to use with SimFactory.  If you don't, then you might want to
+follow the Cactus or Einstein Toolkit tutorials at ...

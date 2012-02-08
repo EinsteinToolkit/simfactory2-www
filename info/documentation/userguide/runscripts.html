@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Run Scripts &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="index.html" />
+    <link rel="up" title="Machine Database" href="machinedb.html" />
+    <link rel="next" title="Submit Scripts" href="submitscripts.html" />
+    <link rel="prev" title="Machines" href="machines.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="submitscripts.html" title="Submit Scripts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Machines"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="machinedb.html" accesskey="U">Machine Database</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Run Scripts</a><ul>
+<li><a class="reference internal" href="#run-script-definitions">Run Script Definitions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="machines.html"
+                        title="previous chapter">Machines</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="submitscripts.html"
+                        title="next chapter">Submit Scripts</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/runscripts.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="run-scripts">
+<h1>Run Scripts<a class="headerlink" href="#run-scripts" title="Permalink to this headline">¶</a></h1>
+<p>A run script is a shell script template which determines how Cactus
+should be run on a particular machine.  It includes the necessary
+mpirun variant for that machine, and the options that need to be
+passed to it.  Run scripts make use of several variables defined by
+SimFactory, such as the number of processors to run on, and the name
+of the parameter file to run.  These definitions are refered to in the
+run script using the &#64;DEF&#64; syntax, where DEF is the name of the
+definition.  SimFactory converts the templated run script into a real
+shell script by expanding these quantities.</p>
+<div class="section" id="run-script-definitions">
+<h2>Run Script Definitions<a class="headerlink" href="#run-script-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The definitions available to a run script are:</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Include automatically generated list of definitions and their documentation from the code</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="submitscripts.html" title="Submit Scripts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="machines.html" title="Machines"
+             >previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="machinedb.html" >Machine Database</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

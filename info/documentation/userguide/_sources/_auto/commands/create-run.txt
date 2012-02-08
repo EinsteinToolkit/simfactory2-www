@@ -1,0 +1,7 @@
+.. _command_create-run:
+
+create-run
+================================================
+
+*create and run a simulation*
+

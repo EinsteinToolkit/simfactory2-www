@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>run &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="../../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="../../index.html" />
+    <link rel="up" title="Commands" href="../../commands.html" />
+    <link rel="next" title="run-debug" href="run-debug.html" />
+    <link rel="prev" title="remove-submitscript" href="remove-submitscript.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="run-debug.html" title="run-debug"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="remove-submitscript.html" title="remove-submitscript"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="../../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../../commands.html" accesskey="U">Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">run</a><ul>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="remove-submitscript.html"
+                        title="previous chapter">remove-submitscript</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="run-debug.html"
+                        title="next chapter">run-debug</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/_auto/commands/run.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="run">
+<span id="command-run"></span><h1>run<a class="headerlink" href="#run" title="Permalink to this headline">¶</a></h1>
+<p><em>launch a simulation</em></p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>sim run [options] <em>simname</em></p>
+<blockquote>
+<div>This command runs an existing simulation interactively; i.e. without
+submitting it to a queuing system.  This can be useful with
+interactive jobs on HPC systems and on workstations and laptops.
+Running codes directly on the head node of an HPC system is usually
+forbidden, and will not usually work.</div></blockquote>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="cmdoption">
+<dt id="cmdoption-sim-run--recover">
+<tt class="descname">--recover</tt><tt class="descclassname"></tt><a class="headerlink" href="#cmdoption-sim-run--recover" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recover and resume simulation using checkpointing.</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-sim-run--debugger">
+<tt class="descname">--debugger</tt><tt class="descclassname"> &lt;totalview/ddt&gt;</tt><a class="headerlink" href="#cmdoption-sim-run--debugger" title="Permalink to this definition">¶</a></dt>
+<dd><p>use this debugger for interactive debugging</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-sim-run--restart-id">
+<tt class="descname">--restart-id</tt><tt class="descclassname"> &lt;id&gt;</tt><a class="headerlink" href="#cmdoption-sim-run--restart-id" title="Permalink to this definition">¶</a></dt>
+<dd><p>assign this restart id to the submitted/ran simulation</p>
+</dd></dl>
+
+<dl class="cmdoption">
+<dt id="cmdoption-sim-run--from-restart-id">
+<tt class="descname">--from-restart-id</tt><tt class="descclassname"> &lt;id&gt;</tt><a class="headerlink" href="#cmdoption-sim-run--from-restart-id" title="Permalink to this definition">¶</a></dt>
+<dd><p>use this restart id when recovering. &#8211;recover must also be provided</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="run-debug.html" title="run-debug"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="remove-submitscript.html" title="remove-submitscript"
+             >previous</a> |</li>
+        <li><a href="../../index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="../../reference.html" >Reference</a> &raquo;</li>
+          <li><a href="../../commands.html" >Commands</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

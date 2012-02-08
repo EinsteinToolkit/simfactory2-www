@@ -1,0 +1,7 @@
+.. _command_remove-submitscript:
+
+remove-submitscript
+================================================
+
+*remove a submit script from a configuration*
+

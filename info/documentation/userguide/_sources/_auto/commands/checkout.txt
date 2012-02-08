@@ -1,0 +1,7 @@
+.. _command_checkout:
+
+checkout
+================================================
+
+*checkout thorns using GetComponents*
+

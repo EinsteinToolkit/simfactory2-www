@@ -1,0 +1,7 @@
+.. _command_interactive:
+
+interactive
+================================================
+
+*initiate an interactive session on a compute node*
+

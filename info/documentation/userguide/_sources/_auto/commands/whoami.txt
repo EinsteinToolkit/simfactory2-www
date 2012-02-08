@@ -1,0 +1,7 @@
+.. _command_whoami:
+
+whoami
+================================================
+
+*what is the name of the machine simfactory is running on*
+

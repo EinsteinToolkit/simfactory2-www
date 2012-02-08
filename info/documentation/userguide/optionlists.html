@@ -1,0 +1,143 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Option Lists &mdash; SimFactory v2 documentation</title>
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '2',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="SimFactory v2 documentation" href="index.html" />
+    <link rel="up" title="Machine Database" href="machinedb.html" />
+    <link rel="next" title="defs.local.ini" href="defs.local.ini.html" />
+    <link rel="prev" title="Submit Scripts" href="submitscripts.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="defs.local.ini.html" title="defs.local.ini"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="submitscripts.html" title="Submit Scripts"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="machinedb.html" accesskey="U">Machine Database</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Option Lists</a><ul>
+<li><a class="reference internal" href="#option-list-definitions">Option List Definitions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="submitscripts.html"
+                        title="previous chapter">Submit Scripts</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="defs.local.ini.html"
+                        title="next chapter">defs.local.ini</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/optionlists.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="option-lists">
+<h1>Option Lists<a class="headerlink" href="#option-lists" title="Permalink to this headline">¶</a></h1>
+<p>An option list is a file containing a set of variable definitions used
+to configure a Cactus build on a particular machine.  For example, it
+might contain the path to the C compiler, the desired optimisation
+settings, and the location of the HDF5 library on that machine.</p>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">Include link to description of option lists on cactuscode.org</p>
+</div>
+<p>SimFactory allows Cactus option lists to contain variable definitions
+which it substitutes.  These definitions are refered to in the
+optionlist using the &#64;DEF&#64; syntax, where DEF is the name of the
+definition.  SimFactory converts the templated option list into a real
+option list by expanding these quantities.</p>
+<div class="section" id="option-list-definitions">
+<h2>Option List Definitions<a class="headerlink" href="#option-list-definitions" title="Permalink to this headline">¶</a></h2>
+<p>The definitions available to an option list are:</p>
+<div class="admonition-todo admonition" id="index-1">
+<p class="first admonition-title">Todo</p>
+<p class="last">Include automatically generated list of definitions and their documentation from the code</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="defs.local.ini.html" title="defs.local.ini"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="submitscripts.html" title="Submit Scripts"
+             >previous</a> |</li>
+        <li><a href="index.html">SimFactory v2 documentation</a> &raquo;</li>
+          <li><a href="reference.html" >Reference</a> &raquo;</li>
+          <li><a href="machinedb.html" >Machine Database</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, Erik Schnetter and Michael Thomas.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
