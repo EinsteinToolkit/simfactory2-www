@@ -1,26 +1,33 @@
 <?php $title='Download';
 include_once($_SERVER['DOCUMENT_ROOT'].'/global/header.php');?>
 
-<p>
-There are currently two supported versions of The Simulation Factory. Both are available to be retreived via SVN.<br>
-Use the command <b>svn export</b> with the provided urls.
-</p>
+<p>The Simulation Factory can be downloaded using SVN.  Note that it
+is included with the <a href = "http://einsteintoolkit.org">Einstein
+Toolkit</a>, so if you are using the toolkit, you probably already
+have it in the directory Cactus/simfactory.</p>
 
-<p> Simulation Factory 1.0, Perl <br>
+<h4>SimFactory 2 (current version)</h4>
 
-<ul>
-<li> <b>Trunk:</b> https://svn.cct.lsu.edu/repos/numrel/simfactory
-<li> <b>Einstein Toolkit Release:</b> https://svn.cct.lsu.edu/repos/numrel/simfactory/branches/ET_2010_06 
-</ul>
 
-</p>
+<p>Stable:</p>
 
-<p> Simulation Factory 2.0, Python <br>
+<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2011_10">https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2011_10</a> simfactory</pre>
 
-<ul>
-<li> <b>Trunk:</b> https://svn.cct.lsu.edu/repos/numrel/simfactory/branches/PYSIM_2010
-</ul>
+<p>Development:</p>
 
-</p>
+<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/trunk">https://svn.cct.lsu.edu/repos/numrel/simfactory2/trunk</a> simfactory</pre>
+
+<h4>SimFactory 1 (not maintained)</h4>
+
+This version of SimFactory was discontinued in October 2011 and will
+no longer be supported.  Please upgrade to SimFactory 2 instead.
+
+<p>Stable:</p>
+
+<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory/branches/ET_2010_06">https://svn.cct.lsu.edu/repos/numrel/simfactory/branches/ET_2010_06</a> simfactory</pre>
+
+<p>Development:</p>
+
+<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory/trunk">https://svn.cct.lsu.edu/repos/numrel/simfactory/trunk</a> simfactory</pre>
 
 <?php include_once($_SERVER['DOCUMENT_ROOT'].'/global/footer.php');?>
