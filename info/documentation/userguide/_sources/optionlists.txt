@@ -21,3 +21,5 @@ Option List Definitions
 The definitions available to an option list are:
 
 .. todo:: Include automatically generated list of definitions and their documentation from the code
+
+.. todo:: Include guidelines for writing option lists for use with SimFactory
