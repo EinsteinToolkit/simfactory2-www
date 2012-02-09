@@ -2,10 +2,13 @@
 Introduction
 ============
 
-.. todo:: Give an overview of SimFactory here
-
-SimFactory is ...
+The Simulation Factory provides an abstraction over the process of
+running simulations using the Cactus Computational Toolkit.  It
+handles building Cactus on a variety of supercomputers as well as
+submitting Cactus jobs to their queuing systems.  It contains a
+machine data base with configuration information for many of the HPC
+resources commonly used with Cactus.
 
 It is assumed that you already have a Cactus source directory which
 you want to use with SimFactory.  If you don't, then you might want to
-follow the Cactus or Einstein Toolkit tutorials at ...
+follow the `Cactus download instructions <http://cactuscode.org/download>`_.
