@@ -17,6 +17,9 @@ sim sync [options] [ *machine* ]
   is copied.  Subsequent calls will only synchronise the files which
   have changed.
 
+  You can control exactly what is synced by creating a file
+  simfactory/etc/filter.local.rules which is used as an Rsync filter
+  rules file (see "man rsync" for a description).
 
 Options
 -------
