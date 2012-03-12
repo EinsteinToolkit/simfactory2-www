@@ -157,6 +157,7 @@ simulation restart directory on job submission (or interactive
 running). This ensures that the test data and scripts are available
 when the home directory is not mounted on the compute nodes, and that
 the test data is not modified between job submission and job running.
+On some machines, this copying process can take a long time.
 
 When you use the :option:`--testsuite` option, it is not necessary to specify a
 parameter file. The positional arguments syntax (parfile, cores,
