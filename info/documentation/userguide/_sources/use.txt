@@ -181,7 +181,9 @@ extension. The resulting file should be a valid SimFactory parameter
 file. SimFactory supports such scripts directly.  You can use a script
 in place of a parameter file when invoking SimFactory. When a
 simulation is run, the script will be executed and the resulting
-parameter file will be used by Cactus. 
+parameter file will be used by Cactus. NB: Remember to use the full path
+of the original script when determining the output filename, not just the
+base name.
 
 For example,
 
