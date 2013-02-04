@@ -3,5 +3,5 @@
 cleanup
 ================================================
 
-*clean up a simulation*
+*clean up one or more simulations*
 

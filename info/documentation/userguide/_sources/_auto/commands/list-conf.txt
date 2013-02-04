@@ -1,6 +1,6 @@
-.. _command_list-configurations:
+.. _command_list-conf:
 
-list-configurations
+list-conf
 ================================================
 
 **
