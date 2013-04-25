@@ -11,7 +11,7 @@ have it in the directory Cactus/simfactory.</p>
 
 <p>Stable:</p>
 
-<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2011_10">https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2011_10</a> simfactory</pre>
+<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2012_11">https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2012_11</a> simfactory</pre>
 
 <p>Development:</p>
 
