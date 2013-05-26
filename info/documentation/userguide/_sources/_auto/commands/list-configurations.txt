@@ -3,5 +3,5 @@
 list-configurations
 ================================================
 
-**
+*list simfactory cactus configurations*
 

@@ -19,12 +19,12 @@ Definitions
   and requests a certain number of cores on each node.
 
 - The MDB entries [maxnodes], [minppn], and [maxppn] define how many
-  nodes a job can request at most, and define the range of allowed
-  values for cores-per-node.
+  nodes a job can request at most, and thus define the range of
+  allowed values for cores-per-node.
 
 - SimFactory starts a number of MPI *processes*, choosing how many MPI
   processes should be placed on every node. Each MPI process starts a
-  certain number of OpenMP *threads*. The distribution of threads to
+  certain number of OpenMP *threads*. The distribution of threads onto
   cores is performed automatically by the operating system and usually
   cannot be influenced.
 
@@ -42,43 +42,51 @@ options. These variables and options have the following definitions:
 Variable          Option          Definition
 ===============   =============   ===================
 NODES                             nodes
-PROCS             --procs         threads
 PROCS_REQUESTED                   cores
 PPN               --ppn           cores per node
-PPN_USED          --ppn-used      threads per node
 NUM_PROCS                         processes
+NODE_PROCS                        processes per node
+PROCS             --procs         threads
 NUM_THREADS       --num-threads   threads per process
+PPN_USED          --ppn-used      threads per node
+NUM_SMT           --num-smt       threads per core
 ===============   =============   ===================
-
-Other important quantitites
----------------------------
-
-processes per node
-
- = (NUM_PROCS + NODES - 1) / NODES
-
- = PPN_USED / NUM_THREADS
-
- = NODE_PROCS
-
-Note that nodes and processes, or cores and threads may not be integer
-multiples of each other. Results of divisions must be correctly
-rounded.
 
 Choice process
 --------------
 
-The user chooses the total number of threads (--procs) and the number
-of threads per process (--num-threads). We then assume that we run
-one thread per core, that we use all cores per node, and that we use
-as few nodes as possible. This defines defaults for all other
-quantities. The user can under- or over-subscribe cores by defining
-how many threads per node (--ppn-used) to run. The number of nodes is
-always chosen automatically.
+The user chooses the total number of threads (--procs). The user can
+also choose the number of threads per process (--num-threads) and the
+number of threads per core (--num-smt). Additionally, the user can
+also specify the number of cores per node (--ppn) and the number of
+threads per node (--ppn-used), allowing for under- or over-subscribing
+or cores. The number of nodes is always chosen automatically. Values
+that are not specified are taken from a previous restart (if one
+exists), or from the system's MDB entry.
 
 The number of cores per node that can be requested from the queuing
-system define a granularity. The number of threads that the user wants
-to run may not fit. In this case, the last node may be used only
-partially. Similarly, the number of threads per node may be arbitrary,
-and may not be equal to (or an integer multiple of) the number of
-cores per node.
+system define a granularity that may be inconsistent with the total
+number of threads. In this case, the last node may be used only
+partially. Similarly, the number of threads per process defines a
+granularity that may be inconsistent with the total number of threads.
+In this case, the total number of threads is rounded up, so that the
+job will have more threads running.
+
+Definitions and constraints
+---------------------------
+
+Number of MPI processes:
+   NUM_PROCS := PROCS / NUM_THREADS
+constraint:
+   PROCS % NUM_THREADS = 0
+
+Number of nodes:
+   NODES := ceil(PROCS / PPNUSED)
+
+Number of requested cores:
+   PROCS_REQUESTED := NODES * PPN
+
+Number of MPI processes per node:
+   NODE_PROCS := PPNUSED * NUM_SMT/ NUM_THREADS
+constraint:
+   PPNUSED * NUM_SMT % NUM_THREADS = 0
