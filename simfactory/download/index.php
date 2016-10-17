@@ -1,7 +1,7 @@
 <?php $title='Download';
 include_once($_SERVER['DOCUMENT_ROOT'].'/global/header.php');?>
 
-<p>The Simulation Factory can be downloaded using SVN.  Note that it
+<p>The Simulation Factory can be downloaded using git.  Note that it
 is included with the <a href = "http://einsteintoolkit.org">Einstein
 Toolkit</a>, so if you are using the toolkit, you probably already
 have it in the directory Cactus/simfactory.</p>
@@ -11,11 +11,11 @@ have it in the directory Cactus/simfactory.</p>
 
 <p>Stable:</p>
 
-<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2012_11">https://svn.cct.lsu.edu/repos/numrel/simfactory2/branches/ET_2012_11</a> simfactory</pre>
+<pre>git clone -b ET_2016_05 https://bitbucket.org/simfactory/simfactory2.git</pre>
 
 <p>Development:</p>
 
-<pre>svn checkout <a href = "https://svn.cct.lsu.edu/repos/numrel/simfactory2/trunk">https://svn.cct.lsu.edu/repos/numrel/simfactory2/trunk</a> simfactory</pre>
+<pre>git clone https://bitbucket.org/simfactory/simfactory2.git</pre>
 
 <h4>SimFactory 1 (not maintained)</h4>
 
