@@ -1,6 +1,6 @@
 <?php
 
-echo "Running site update...";
+echo "Running site update...<br>";
 
 /* update the local checkout from svn */
 exec('/cct/groups/simfactory/update-svn 2>&1');
