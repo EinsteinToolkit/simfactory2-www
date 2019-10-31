@@ -11,7 +11,7 @@ have it in the directory Cactus/simfactory.</p>
 
 <p>Stable:</p>
 
-<pre>git clone -b ET_2019_03 https://bitbucket.org/simfactory/simfactory2.git</pre>
+<pre>git clone -b ET_2019_10 https://bitbucket.org/simfactory/simfactory2.git</pre>
 
 <p>Development:</p>
 
